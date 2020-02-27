@@ -1,9 +1,10 @@
+#coding=utf-8
 import time
 
 from selenium import webdriver
 
 opt = webdriver.ChromeOptions()  # 创建浏览器
-# opt.headless = True  # 无窗口模式 可注释此行查看chrome运行情况
+opt.headless = True  # 无窗口模式 可注释此行查看chrome运行情况
 driver = webdriver.Chrome(options=opt)  # 创建浏览器对象
 driver.get('https://xgbxscwx.seu.edu.cn/#/')  # 打开网页
 time.sleep(3)

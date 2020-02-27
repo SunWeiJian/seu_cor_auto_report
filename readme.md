@@ -3,8 +3,10 @@
 （推荐使用pycharm打开）
 
 
-需要将\venv\Scripts\chromedriver.exe 替换为对应chrome版本的
+- 需要将\venv\Scripts\chromedriver.exe 替换为对应chrome版本的
 [chromedriver](https://chromedriver.chromium.org/downloads "chromedriver") 
+
+- 需要安装selenium
 
 （默认使用的是80版本的Chrome）
 
