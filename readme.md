@@ -6,7 +6,8 @@
 - 需要将\venv\Scripts\chromedriver.exe 替换为对应chrome版本的
 [chromedriver](https://chromedriver.chromium.org/downloads "chromedriver") 
 
-- 需要安装selenium
+如果无法使用venv/pycharm：
+- 需要安装selenium（以及对应的chromedriver）
 
 （默认使用的是80版本的Chrome）
 
