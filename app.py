@@ -10,8 +10,8 @@ driver = webdriver.Chrome(options=opt)  # 创建浏览器对象
 driver.get('https://xgbxscwx.seu.edu.cn/#/')  # 打开网页
 time.sleep(3)
 
-driver.find_element_by_xpath("//input[@id='username']").send_keys("213163540")  # 填入你的一卡通号
-driver.find_element_by_xpath("//input[@id='password']").send_keys("sdzjfy121")  # 填入你的密码
+driver.find_element_by_xpath("//input[@id='username']").send_keys("账号")  # 填入你的一卡通号
+driver.find_element_by_xpath("//input[@id='password']").send_keys("密码")  # 填入你的密码
 driver.find_element_by_xpath("//button[@type='submit']").click()
 time.sleep(2)
 
