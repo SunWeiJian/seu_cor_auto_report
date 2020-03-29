@@ -4,6 +4,7 @@ import time
 from selenium import webdriver
 import selenium
 import os
+import requests
 
 try:
     user = os.environ["username"]
