@@ -4,15 +4,13 @@ import time
 from selenium import webdriver
 import selenium
 import os
+
 try:
-    sckey = os.environ(sckey)
+    user = os.environ("username")
+    pwd = os.environ("password")
+    sckey = os.environ("sckey") 
 except:
-    pass
-try:
-    user = os.environ(username)
-    pwd = os.environ(password)   
-except:
-    print("参数不完整或错误，请检查用户名、密码是否正确填写")
+    print("参数不完整或错误，请检查用户名、密码、key是否正确填写")
     exit(1)
 
 options = webdriver.ChromeOptions()
