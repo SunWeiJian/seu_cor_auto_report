@@ -32,12 +32,12 @@ browser.find_element_by_xpath("//input[@id='password']").send_keys(pwd)  # 填�
 browser.find_element_by_xpath("//button[@type='submit']").click()
 time.sleep(2)
 
-print(driver.find_element_by_xpath("/html/body/div/div/div[2]/div[2]/h2").text)
-driver.find_element_by_xpath("/html/body/div/div/div[2]/div[2]/div/div/div[1]").click()
+print(browser.find_element_by_xpath("/html/body/div/div/div[2]/div[2]/h2").text)
+browser.find_element_by_xpath("/html/body/div/div/div[2]/div[2]/div/div/div[1]").click()
 time.sleep(2)
 
 try:
-    driver.find_element_by_xpath("/html/body/div/div/div[2]/div[2]/div/div/div/div/form/div[9]/div/button").click()
+    browser.find_element_by_xpath("/html/body/div/div/div[2]/div[2]/div/div/div/div/form/div[9]/div/button").click()
 except selenium.common.exceptions.NoSuchElementException:
     api = 'https://sc.ftqq.com/' + sckey + '.send'
     title = "上报成功"
