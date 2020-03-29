@@ -26,16 +26,16 @@ browser.set_window_size(1200, 2000)
 
 browser.get('https://xgbxscwx.seu.edu.cn/#/')  # 打开网页
 time.sleep(3)
-
+print("1")
 browser.find_element_by_xpath("//input[@id='username']").send_keys(user)  # 填入你的一卡通号
 browser.find_element_by_xpath("//input[@id='password']").send_keys(pwd)  # 填入你的密码
 browser.find_element_by_xpath("//button[@type='submit']").click()
 time.sleep(2)
-
+print("2")
 print(browser.find_element_by_xpath("/html/body/div/div/div[2]/div[2]/h2").text)
 browser.find_element_by_xpath("/html/body/div/div/div[2]/div[2]/div/div/div[1]").click()
 time.sleep(2)
-
+print("3")
 try:
     browser.find_element_by_xpath("/html/body/div/div/div[2]/div[2]/div/div/div/div/form/div[9]/div/button").click()
 except selenium.common.exceptions.NoSuchElementException:
