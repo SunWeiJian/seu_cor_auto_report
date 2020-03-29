@@ -1,34 +1,32 @@
 # This workflow will install Python dependencies, run tests and lint with a single version of Python
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
 
-name: auto report
+name: Auto report
 
 on:
   push:
-    branches: [ master ]
   schedule:
     - cron: '0 0 * * *'
 
 jobs:
-  report:
-
+  sign_in:
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v2
-    - name: Set up Python 3.8
+    - name: 'Checkout codes'
+      uses: actions/checkout@v2
+    - name: 'Set python'
       uses: actions/setup-python@v1
       with:
-        python-version: 3.8
-    - name: Install dependencies
+        python-version: '3.x'
+    - name: 'Install dependencies'
       run: |
         python -m pip install --upgrade requests
         python -m pip install --upgrade pip
         pip install -r requirements.txt
-    - name: 'auto report'
+    - name: 'Sign In'
       env:
-        sckey:${{secrets.sckey}}
-        username:${{ secrets.username }}
-        password:${{ secrets.password }}
+        username: ${{ secrets.username }}
+        password: ${{ secrets.password }}
+        sckey: ${{ secrets.sckey }} 
       run: |
         python app.py
