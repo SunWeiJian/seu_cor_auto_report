@@ -6,12 +6,11 @@ import selenium
 import os
 
 try:
-    sckey = os.environ(sckey)
-try:
     user = os.environ(username)
     pwd = os.environ(password)
+    sckey = os.environ(sckey)
 except:
-    print("参数不完整或错误，请检查用户名、密码是否正确填写")
+    print("参数不完整或错误，请检查用户名、密码、key是否正确填写")
     exit(1)
 
 options = webdriver.ChromeOptions()
