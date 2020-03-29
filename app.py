@@ -6,9 +6,9 @@ import selenium
 import os
 
 try:
-    user = os.environ("username")
-    pwd = os.environ("password")
-    sckey = os.environ("sckey") 
+    user = os.environ["username"]
+    pwd = os.environ["password"]
+    sckey = os.environ["sckey"]
 except:
     print("参数不完整或错误，请检查用户名、密码、key是否正确填写")
     exit(1)
