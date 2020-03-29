@@ -66,16 +66,16 @@ else:
         try:
             browser.find_element_by_xpath('/html/body/div[3]/div/div[3]/button[2]').click()
         except selenium.common.exceptions.NoSuchElementException:
-        api = 'https://sc.ftqq.com/' + sckey + '.send'
-        title = "今日已经上报过了"
-        content = "今日已经上报过了！"
-        data = {
-            "text" : title,
-            "desp" : content
-                }
-        req = requests.post(api, data = data)
-        print("推送成功，假如没有收到推送，请检查key是否正确")
-        exit(0)
+            api = 'https://sc.ftqq.com/' + sckey + '.send'
+            title = "今日已经上报过了"
+            content = "今日已经上报过了！"
+            data = {
+                "text" : title,
+                "desp" : content
+                    }
+            req = requests.post(api, data = data)
+            print("推送成功，假如没有收到推送，请检查key是否正确")
+            exit(0)
         else:
             api = 'https://sc.ftqq.com/' + sckey + '.send'
             title = "上报成功"
