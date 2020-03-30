@@ -34,6 +34,8 @@ time.sleep(10)
 
 print("3")
 try:
+    browser.refresh()
+    time.sleep(10)
     browser.find_element_by_xpath('/html/body/div[1]/div/div[1]/button[1]').click()
 except selenium.common.exceptions.NoSuchElementException:
     api = 'https://sc.ftqq.com/' + sckey + '.send'
@@ -47,7 +49,7 @@ except selenium.common.exceptions.NoSuchElementException:
     print("推送成功，假如没有收到推送，请检查key是否正确")
     exit(0)
 else:
-    time.sleep(7)
+    time.sleep(10)
     try:
         browser.find_element_by_xpath('/html/body/div[1]/div/div/div[3]/button').click()
     except selenium.common.exceptions.NoSuchElementException:
@@ -62,7 +64,7 @@ else:
         print("推送成功，假如没有收到推送，请检查key是否正确")
         exit(0)
     else:
-        time.sleep(5)
+        time.sleep(10)
         try:
             browser.find_element_by_xpath('/html/body/div[3]/div/div[3]/button[2]').click()
         except selenium.common.exceptions.NoSuchElementException:
