@@ -2,4 +2,5 @@
 本人自用
 
 使用selenium 、github actions 并实现微信推送通知
+(不再更新)
 
